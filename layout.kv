@@ -1,0 +1,65 @@
+#:kivy 1.11.1
+<ScreenManager>:
+    LoginScreen
+	HomeScreen
+
+
+<HomeScreen>:
+    name: 'home'
+	AsyncImage:
+        source: 'Source/bkg.jpg'
+	Label:
+		pos_hint: {'center_x': .5, 'center_y': .5}
+		id:"loading"
+		text:"Connecting..."
+
+<LoginScreen>:
+	default_heigh:80
+    name: 'Login'
+
+    AsyncImage:
+        source: 'Source/bkg.jpg'
+
+
+	AnchorLayout:
+		anchor_x:"center"
+		anchor_y:"center"
+		padding:[min(root.size)/8,min(root.size)*7/16,min(root.size)/8,min(root.size)*7/16]
+		GridLayout:
+			border: 10, 10, 10, 10
+			pos_hint: {'center_x': .5, 'center_y': .5}
+			size: min(root.size)/4, min(root.size)/4
+			cols:2
+			rows:4
+			Label:
+				id:"hostname"
+				text:"Host"
+				width:100
+			TextInput:
+				id:"hosttext"
+				width:100
+				multiline:False
+			Label:
+				id:"usrname"
+				text:"usrname"
+				width:100
+			TextInput:
+				id:"usrnametext"
+				width:100
+				multiline:False
+			Label:
+				id:"pwd"
+				text:"pwd"
+				width:100
+			TextInput:
+				id:"pwdtext"
+				width:100
+				multiline:False
+			Button:
+				text:"Cancel"
+			Button:
+				text:"Submit"
+				on_release:root.manager.current='home'
+
+
+
