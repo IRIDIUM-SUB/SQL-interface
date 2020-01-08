@@ -6,7 +6,7 @@
  * @LastEditTime: 2019-12-10 22:39:34
  -->
 # SQL-interface
-Charpter4 of database labtory,HUST. Use kivy as GUI interface.
+Charpter4 of database experiment,HUST. Use kivy as GUI interface.
 ## Requirement
 1. 新生入学信息增加，学生信息修改。
 2. 课程信息维护（增加新课程，修改课程信息，删除没有选课的课程信息）。
